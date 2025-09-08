@@ -18,24 +18,23 @@ Datum: 08-09-2025
 
     {{-- Favicon --}}
 
-    {{-- Styles --}}
+    {{-- Stylesheet --}}
     <link rel="stylesheet" href="{{ asset('css/stylesheet.css') }}">
+
+    {{-- Vite --}}
+       {{-- @vite(['resources/js/app.ts']) --}}
 
     {{-- Fonts --}}
 
-
-    {{-- Vite --}}
-    {{-- @vite(['resources/js/app.ts']) --}}
+  
 </head>
 
 <body>
-
     <header>
         @include('includes.header')
     </header>
 
     <main>
-
 
         <h1 id="Welcome">Colored Text, written in LESSCSS</h1>
 
@@ -52,7 +51,15 @@ Datum: 08-09-2025
                 @yield('HomePage')
             </div>
 
+            <div class="artikelen-container">
+                @yield('ArtikelPage')
+            </div>
+
+            <div class="leverancier-container">
+                @yield('LeverancierPage')
+            </div>
         </div>
+        
     </main>
 
     <footer>

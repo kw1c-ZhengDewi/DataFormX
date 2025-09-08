@@ -1,4 +1,4 @@
-// Master Page ---------------------------------------------------------
+// App Page ---------------------------------------------------------
 
 * {
     /* Apply a consistent box model and font across all elements */
@@ -23,7 +23,32 @@ body {
     height: 100%;
 }
 
-// App Page Styles
-#Welcome {
-    color: green;
+/* Header */
+
+header {
+    width: 100%;
+    height: auto;
+    padding: 2em 1em;
+    background-color: rgba(112, 3, 3, 0.766);
+    display: flex;
+    justify-content: end;
 }
+
+.app-navigation {
+    a {
+        padding: 14px 16px;
+        font-size: 1.5em;
+        text-decoration: none;
+        color: white;
+    }
+}
+
+// Main
+
+main {
+    /* Allows main content to grow and push footer to bottom if needed */
+    flex: 1;
+    min-height: calc(100dvh - 160px);
+}
+
+// Footer
