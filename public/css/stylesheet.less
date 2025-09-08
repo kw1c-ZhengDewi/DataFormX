@@ -1,0 +1,29 @@
+// Master Page ---------------------------------------------------------
+
+* {
+    /* Apply a consistent box model and font across all elements */
+    box-sizing: border-box;
+}
+
+html {
+    /* Prevent horizontal scrolling */
+    overflow-x: hidden;
+}
+
+html:focus-within {
+    /* Enable smooth scrolling when focusing on elements with keyboard or script */
+    scroll-behavior: smooth !important;
+}
+
+html,
+body {
+    /* Remove default spacing and ensure full height for layout calculations */
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+// App Page Styles
+#Welcome {
+    color: green;
+}
