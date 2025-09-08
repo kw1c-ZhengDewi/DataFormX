@@ -3,6 +3,7 @@
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\ArtikelController;
 
 Route::get('/', function () {
     return Inertia::render('Welcome');
@@ -22,3 +23,6 @@ Route::get('/', [PageController::class, 'app']); // For All Pages
 Route::get('/home', [PageController::class, 'home']); // Homepage
 Route::get('/artikel', [PageController::class, 'artikel']); // Artikel
 Route::get('/leverancier', [PageController::class, 'leverancier']); // Artikel
+
+// Add a product 
+Route::post('/AddProduct', [ArtikelController::class,'AddProduct']);

@@ -13,7 +13,18 @@
 @section('ArtikelPage')
     <h2>Artikel Formulier</h2>
 
-    
+    {{-- Add a product --}}
+  <div style="border: 3px solid black">
+  <h2>Add a new Product</h2>
+
+  <form action="/AddProduct" method="POST">
+    {{-- CSRF should always after the form, otherwise it won't connect --}}
+      @csrf 
+  <input type="text" name="title" placeholder="product title">
+    <textarea name="body" placeholder="Product content..."></textarea>
+    <button>Save Product</button>
+  </div>
+  </form>
 @endsection
     
 </body>

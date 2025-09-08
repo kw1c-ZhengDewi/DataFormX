@@ -59,6 +59,10 @@ Datum: 08-09-2025
                 @yield('LeverancierPage')
             </div>
         </div>
+
+        {{-- Todo: CSS cannot be imported in app.js error --}}
+        {{-- Todo : Current fix: LESSCSS in the public folder --}}
+
         
     </main>
 
