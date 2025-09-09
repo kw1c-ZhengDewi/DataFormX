@@ -53,7 +53,27 @@ main {
     /* Allows main content to grow and push footer to bottom if needed */
     flex: 1;
     min-height: calc(100dvh - 160px);
+
+    .container {
+        padding: 1rem;
+    }
+}
+
+.AllProducts {
+    margin: 2rem;
     padding: 1rem;
+    border: 2px solid black;
+}
+
+.ArtikelContainer {
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: 1fr 1fr 1fr;
+    .ArtikelBox {
+        border: 1px solid black;
+        width: 225px;
+        height: 225px;
+    }
 }
 
 // Footer

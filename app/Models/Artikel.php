@@ -2,18 +2,17 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Artikel extends Model
 {
-    use HasFactory; //Testing the database with fake data
+     use HasFactory;
+
     protected $fillable = [
-        'productnaam',
-        'productbeschrijving',
+        'artikelnaam',
+        'artikelbeschrijving',
         'leverancier',
         'emailadres',
-        'user_id',
     ];
-}
+}   

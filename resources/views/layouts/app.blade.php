@@ -30,21 +30,13 @@ Datum: 08-09-2025
 </head>
 
 <body>
+    @auth
     <header>
         @include('includes.header')
     </header>
 
+    
     <main>
-
-        <h1 id="Welcome">Colored Text, written in LESSCSS</h1>
-
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Vel, quod deserunt officia ducimus ipsa soluta corporis provident libero,
-            debitis sequi exercitationem explicabo, quasi autem unde quae totam recusandae
-            est ipsum?
-        </p>
-
         <div class="container">
             {{-- Homepage --}}
             <div class="home-container">
@@ -52,23 +44,24 @@ Datum: 08-09-2025
             </div>
 
             <div class="artikelen-container">
-                @yield('ArtikelPage')
+                {{-- Form met alle artikelen --}}
+                @yield("AddArtikel")
+                @yield("ViewArtikel")
             </div>
 
             <div class="leverancier-container">
                 @yield('LeverancierPage')
+
+                {{-- Form met alle leveranciers --}}
+                 @yield("Form-Leveranciers")
             </div>
         </div>
-
-        {{-- Todo: CSS cannot be imported in app.js error --}}
-        {{-- Todo : Current fix: LESSCSS in the public folder --}}
-
-        
     </main>
 
     <footer>
         @include('includes.footer')
     </footer>
+    @endauth
 </body>
 
 </html>

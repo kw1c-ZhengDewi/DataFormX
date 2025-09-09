@@ -25,4 +25,4 @@ Route::get('/artikel', [PageController::class, 'artikel']); // Artikel
 Route::get('/leverancier', [PageController::class, 'leverancier']); // Artikel
 
 // Add a product 
-Route::post('/AddProduct', [ArtikelController::class,'AddProduct']);
+Route::post('/AddArtikel', [ArtikelController::class,'AddArtikel']); // Add Artikel

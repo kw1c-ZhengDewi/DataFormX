@@ -9,28 +9,28 @@ use Illuminate\Support\Facades\Auth;
 class ArtikelController extends Controller
 {
     // Post validation request
-    public function AddProduct(Request $request)
+    public function AddArtikel(Request $request)
     {
-        // Validate incoming request
-        $incomingFields = $request->validate([
-            'productnaam' => 'required',
-            'productbeschrijving' => 'required',
-            'leverancier' => 'required',
-            'emailadres' => 'required|email',
-        ]);
+          
+    //Artikel Opslaan in een Database
+    $incomingFields = $request->validate([
+    'artikelnaam'  => 'required',
+    'artikelbeschrijving' => 'required',
+    'leverancier'=> 'required',
+    'emailadres'=> 'required',
+    ]);
 
-        // Prevent HTML/malicious content
-        $incomingFields['productnaam'] = strip_tags($incomingFields['productnaam']);
-        $incomingFields['productbeschrijving'] = strip_tags($incomingFields['productbeschrijving']);
+
+      // Prevent actual codes in a database such as html tags or malicious contents 
+        $incomingFields['artikelnaam'] = strip_tags($incomingFields['artikelnaam']);
+        $incomingFields['artikelbeschrijving'] = strip_tags($incomingFields['artikelbeschrijving']);
         $incomingFields['leverancier'] = strip_tags($incomingFields['leverancier']);
         $incomingFields['emailadres'] = strip_tags($incomingFields['emailadres']);
 
-        // Add authenticated user id
-        $incomingFields['user_id'] = Auth::id();
-
-        // Create the artikel
+        // Create a Artikel
         Artikel::create($incomingFields);
-
         return redirect('/');
+
     }
+
 }
