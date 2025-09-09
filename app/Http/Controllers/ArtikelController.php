@@ -17,7 +17,7 @@ class ArtikelController extends Controller
     'artikelnaam'  => 'required',
     'artikelbeschrijving' => 'required',
     'leverancier'=> 'required',
-    'emailadres'=> 'required',
+    'emailadres'=> 'required|email',
     ]);
 
 
@@ -29,8 +29,8 @@ class ArtikelController extends Controller
 
         // Create a Artikel
         Artikel::create($incomingFields);
-        return redirect('/');
 
+         return redirect('artikel');
     }
 
 }

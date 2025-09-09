@@ -14,7 +14,7 @@ Datum: 08-09-2025
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="author" content="Dewi Hu">
-    <title>DataForm</title>
+    <title>DataFormX</title>
 
     {{-- Favicon --}}
 
@@ -25,17 +25,13 @@ Datum: 08-09-2025
        {{-- @vite(['resources/js/app.ts']) --}}
 
     {{-- Fonts --}}
-
-  
 </head>
 
 <body>
-    @auth
     <header>
         @include('includes.header')
     </header>
 
-    
     <main>
         <div class="container">
             {{-- Homepage --}}
@@ -61,7 +57,7 @@ Datum: 08-09-2025
     <footer>
         @include('includes.footer')
     </footer>
-    @endauth
+  
 </body>
 
 </html>

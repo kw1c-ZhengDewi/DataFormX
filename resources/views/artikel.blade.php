@@ -9,24 +9,25 @@
 </head>
 
 <body>
-
     @extends('layouts.app')
 
     @section('AddArtikel')
         {{-- Add a product --}}
 
-        <h2>Add a new Product</h2>
+        <h2>Voeg een nieuw Artikel</h2>
 
-        <form action="/AddArtikel" method="POST">
-            {{-- CSRF should always after the form, otherwise it won't connect --}}
+    <form action="{{ route('artikels.add') }}" method="POST">            
+      {{-- CSRF should always after the form, otherwise it won't connect --}}
             @csrf
             <input type="text" name="artikelnaam" placeholder="Artikelnaam">
             <br><br>
-            <textarea name="artikelbeschrijving" placeholder="Artikelbeschrijving"></textarea>
+            <input type="text" name="artikelbeschrijving" placeholder="Artikelbeschrijving"></i>
             <br><br>
             <input type="text" name="leverancier" placeholder="Leveranciernaam">
             <br><br>
-            <button>Save Product</button>
+            <input type="email" name="emailadres" placeholder="Emailadres">
+            <br><br>
+            <button type="submit">Artikel Opslaan</button>
         </form>
     @endsection
 
@@ -50,12 +51,7 @@
       </div>
       
     </div>
-
-
-    
   @endsection
-
-
 </body>
 
 </html>

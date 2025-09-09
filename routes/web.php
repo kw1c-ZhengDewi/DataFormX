@@ -22,7 +22,7 @@ require __DIR__.'/auth.php';
 Route::get('/', [PageController::class, 'app']); // For All Pages
 Route::get('/home', [PageController::class, 'home']); // Homepage
 Route::get('/artikel', [PageController::class, 'artikel']); // Artikel
-Route::get('/leverancier', [PageController::class, 'leverancier']); // Artikel
+Route::get('/leverancier', [PageController::class, 'leverancier']); // Leverancier
 
-// Add a product 
-Route::post('/AddArtikel', [ArtikelController::class,'AddArtikel']); // Add Artikel
+// Add a Artikel 
+Route::post('/AddArtikel', [ArtikelController::class, 'AddArtikel'])->name('artikels.add'); // Add Artikel

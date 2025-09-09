@@ -25,6 +25,7 @@ header {
   background-color: rgba(112, 3, 3, 0.766);
   display: flex;
   justify-content: end;
+  z-index: 1;
 }
 .app-navigation a {
   padding: 14px 16px;
@@ -43,7 +44,7 @@ main {
 main .container {
   padding: 1rem;
 }
-.AllArtikelen {
+.AllProducts {
   margin: 2rem;
   padding: 1rem;
   border: 2px solid black;
