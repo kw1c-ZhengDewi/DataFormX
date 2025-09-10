@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-{{-- 
+{{--
 Auteur: Dewi Hu
 Framework: Laravel
 Datum: 08-09-2025
@@ -22,7 +22,7 @@ Datum: 08-09-2025
     <link rel="stylesheet" href="{{ asset('css/stylesheet.css') }}">
 
     {{-- Vite --}}
-       {{-- @vite(['resources/js/app.ts']) --}}
+    @vite(['resources/css/app.less', 'resources/js/app.ts'])
 
     {{-- Fonts --}}
 </head>
@@ -49,7 +49,7 @@ Datum: 08-09-2025
                 @yield('LeverancierPage')
 
                 {{-- Form met alle leveranciers --}}
-                 @yield("Form-Leveranciers")
+                @yield("Form-Leveranciers")
             </div>
         </div>
     </main>
@@ -57,7 +57,7 @@ Datum: 08-09-2025
     <footer>
         @include('includes.footer')
     </footer>
-  
+
 </body>
 
 </html>
