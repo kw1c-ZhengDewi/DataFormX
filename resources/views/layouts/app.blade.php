@@ -18,11 +18,8 @@ Datum: 08-09-2025
 
     {{-- Favicon --}}
 
-    {{-- Stylesheet --}}
-    <link rel="stylesheet" href="{{ asset('css/stylesheet.css') }}">
-
-    {{-- Vite --}}
-       {{-- @vite(['resources/js/app.ts']) --}}
+    {{-- Vite with LESSCSS --}}
+    @vite(['resources/css/app.less', 'resources/js/app.ts'])
 
     {{-- Fonts --}}
 </head>

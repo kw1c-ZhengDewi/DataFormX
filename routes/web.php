@@ -19,7 +19,7 @@ require __DIR__.'/auth.php';
 // Page Controllers
 
 // / is the root of this file
-Route::get('/', [PageController::class, 'app']); // For All Pages
+Route::get('/home', [PageController::class, 'app']); // For All Pages -> app.blade.php file is hidden, /home is the first page
 Route::get('/home', [PageController::class, 'home']); // Homepage
 Route::get('/artikel', [PageController::class, 'artikel']); // Artikel
 Route::get('/leverancier', [PageController::class, 'leverancier']); // Leverancier

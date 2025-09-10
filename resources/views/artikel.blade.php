@@ -37,16 +37,36 @@
       <h2>Alle Artikelen</h2>
 
       <div class="ArtikelContainer">
-        <div class="ArtikelBox">
-         
-        </div>
 
-        <div class="ArtikelBox">
+        {{-- @foreach ($posts as $post) --}}
+
+        <div class="ArtikelBox" style="padding:1rem">
+        <h3>Artikelnaam:</h3>
+        <p>Productbeschrijving:</p>
+        <p>Leverancier:</p>
+        <p>Emailadres:</p>
+        </div>
         
+        <div class="ArtikelBox" style="padding:1rem">
+        <h3>Artikelnaam:</h3>
+        <p>Productbeschrijving:</p>
+        <p>Leverancier:</p>
+        <p>Emailadres:</p>
         </div>
 
-        <div class="ArtikelBox">
-           
+        <div class="ArtikelBox" style="padding:1rem">
+        <h3>Artikelnaam:</h3>
+        <p>Productbeschrijving:</p>
+        <p>Leverancier:</p>
+        <p>Emailadres:</p>
+        </div>
+
+
+        <div class="ArtikelBox" style="padding:1rem">
+        <h3>Artikelnaam:</h3>
+        <p>Productbeschrijving:</p>
+        <p>Leverancier:</p>
+        <p>Emailadres:</p>
         </div>
       </div>
       
