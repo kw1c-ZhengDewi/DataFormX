@@ -18,8 +18,12 @@ require __DIR__.'/auth.php';
 
 // Page Controllers
 
-// / is the root of this file
-Route::get('/home', [PageController::class, 'app']); // For All Pages -> app.blade.php file is hidden, /home is the first page
+// Root -> app
+Route::get('/', [PageController::class, 'app'])->name('app'); 
+// If you still want to keep /app available, leave this line:
+Route::get('/app', [PageController::class, 'app']); 
+
+// Other pages
 Route::get('/home', [PageController::class, 'home']); // Homepage
 Route::get('/artikel', [PageController::class, 'artikel']); // Artikel
 Route::get('/leverancier', [PageController::class, 'leverancier']); // Leverancier
