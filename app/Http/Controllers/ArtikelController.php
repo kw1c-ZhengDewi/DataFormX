@@ -20,8 +20,7 @@ class ArtikelController extends Controller
     'emailadres'=> 'required|email',
     ]);
 
-
-      // Prevent actual codes in a database such as html tags or malicious contents 
+      // Voorkom dat er daadwerkelijke codes in een database voorkomen, zoals html-tags of schadelijke inhoud
         $incomingFields['artikelnaam'] = strip_tags($incomingFields['artikelnaam']);
         $incomingFields['artikelbeschrijving'] = strip_tags($incomingFields['artikelbeschrijving']);
         $incomingFields['leverancier'] = strip_tags($incomingFields['leverancier']);
@@ -30,7 +29,14 @@ class ArtikelController extends Controller
         // Create a Artikel
         Artikel::create($incomingFields);
 
-         return redirect('artikel');
+         return redirect('/artikel');
+    }
+
+    // Artikelen laten zien
+    public function index()
+    {
+        $artikels = Artikel::all();
+        return view('artikel', ['artikels' => $artikels]);
     }
 
 }

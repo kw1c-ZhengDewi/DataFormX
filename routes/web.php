@@ -4,6 +4,7 @@ use Inertia\Inertia;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\ArtikelController;
+use App\Http\Controllers\SearchController;
 
 Route::get('/', function () {
     return Inertia::render('Welcome');
@@ -29,4 +30,8 @@ Route::get('/artikel', [PageController::class, 'artikel']); // Artikel
 Route::get('/leverancier', [PageController::class, 'leverancier']); // Leverancier
 
 // Add a Artikel 
-Route::post('/AddArtikel', [ArtikelController::class, 'AddArtikel'])->name('artikels.add'); // Add Artikel
+Route::post('/AddArtikel', [ArtikelController::class, 'AddArtikel'])->name('artikels.add'); // Voeg Artikels in je Database
+Route::get('/artikel', [ArtikelController::class, 'index'])->name('artikel.index'); //Loop the artikels in the page Artikelpage
+
+// Zoekopdracht 
+Route::get('/my_search', [SearchController::class, 'my_search'])->name('my_search');

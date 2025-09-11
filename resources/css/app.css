@@ -49,13 +49,18 @@ main .container {
   padding: 1rem;
   border: 2px solid black;
 }
-.ArtikelContainer {
-  display: grid;
-  justify-content: space-evenly;
-  grid-template-columns: 25% 25% 25% 25%;
+.AllProducts .ArtikelContainer {
+  gap: 1rem;
+  /* adds space between rows and columns */
 }
-.ArtikelContainer .ArtikelBox {
-  border: 1px solid black;
-  width: 225px;
-  height: 225px;
+.AllProducts .ArtikelContainer .ArtikelBox {
+  padding: 1rem;
+  margin: 2rem;
+  border: 2px black solid;
+  height: auto;
+  width: auto;
+  white-space: wrap;
+}
+.AllProducts .ArtikelContainer .ArtikelBox .DatabaseInfo {
+  font-size: 15px;
 }

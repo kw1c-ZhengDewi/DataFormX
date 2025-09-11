@@ -19,7 +19,8 @@ Datum: 08-09-2025
     {{-- Favicon --}}
 
     {{-- Vite with LESSCSS --}}
-    @vite(['resources/css/app.less', 'resources/js/app.ts'])
+        @vite(['resources/css/app.less', 'resources/js/app.ts'])
+
 
     {{-- Fonts --}}
 </head>
