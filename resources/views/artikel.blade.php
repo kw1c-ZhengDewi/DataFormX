@@ -12,7 +12,6 @@
     @extends('layouts.app')
 
     @section('AddArtikel')
-        {{-- Add a product --}}
 
         <h2>Voeg een nieuw Artikel</h2>
 
@@ -25,13 +24,12 @@
             <!-- Use textarea for artikelbeschrijving -->
             <textarea name="artikelbeschrijving" placeholder="Artikelbeschrijving" 
               style="width: 250px; height: 100px; resize: vertical;"></textarea>         
-              
             <br><br>
             <input type="text" name="leverancier" placeholder="Leveranciernaam" style="width: 250px;height: 30px;">
             <br><br>
             <input type="email" name="emailadres" placeholder="Emailadres" style="width: 250px;height: 30px;">
             <br><br>
-            <button type="submit">Artikel Opslaan</button>
+            <button type="submit">Artikel Toevoegen</button>
         </form>
     @endsection
 
@@ -46,10 +44,9 @@
       <input type="submit" value="Search">
       </form>
       
-       {{-- Check if any articles exist --}}
+      {{-- Controleer of er artikelen bestaan ​​--}}
     @if($artikels->isEmpty())
         <h2>Geen artikels gevonden.</h2>
-
         
     @else  {{-- Hier wordt alle items geloopt --}}
   @foreach($artikels as $artikel)
@@ -59,6 +56,7 @@
         <h3>Artikelnaam: <span class="DatabaseInfo">{{$artikel->artikelnaam}}</span></h3>  
         <p>Artikelbeschrijving: <span class="DatabaseInfo">{{$artikel->artikelbeschrijving}}</span></p>
         <p>Leverancier: <span class="DatabaseInfo">{{$artikel->leverancier}}</span></p>
+        <p>Leverancier: <span class="DatabaseInfo">{{$artikel->emailadres}}</span></p>
         </div>
      </div>
     @endforeach

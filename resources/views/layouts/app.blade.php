@@ -43,11 +43,8 @@ Datum: 08-09-2025
                 @yield("ViewArtikel")
             </div>
 
-            <div class="leverancier-container">
-                @yield('LeverancierPage')
-
-                {{-- Form met alle leveranciers --}}
-                 @yield("Form-Leveranciers")
+            <div class="gebruiker-container">
+                @yield('Registration')
             </div>
         </div>
     </main>

@@ -20,8 +20,8 @@ class PageController extends Controller
     }
 
 
-       public function leverancier() {
-        return view('leverancier');
+       public function gebruiker() {
+        return view('gebruiker');
     }
 
 }
