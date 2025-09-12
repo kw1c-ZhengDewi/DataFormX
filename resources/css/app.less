@@ -60,25 +60,28 @@ main {
     }
 }
 
-.AllProducts {
+.AllProducts,
+.AllUsers {
     margin: 2rem;
     padding: 1rem;
     border: 2px solid black;
 
-    .ArtikelContainer {
+    .ArtikelContainer,
+    .GebruikerContainer {
         gap: 1rem; /* adds space between rows and columns */
 
-        .ArtikelBox {
+        .ArtikelBox,
+        .GebruikerBox {
             padding: 1rem;
             margin: 2rem;
             border: 2px black solid;
             height: auto;
             width: auto;
             white-space: wrap;
-
-            .DatabaseInfo {
-                font-size: 15px;
-            }
         }
     }
+}
+
+.DatabaseInfo {
+    font-size: 15px;
 }

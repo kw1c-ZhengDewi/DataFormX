@@ -26,10 +26,13 @@
             {{-- De invoernaam is altijd vereist, zelfs met Laravel --}}
             <input name="name" type="text" placeholder="Username">
             <br><br>
-            <input name="email" type="text" placeholder="Email">
-            <br><br>
+
             <input name="password" type="password" placeholder="Password">
             <br><br>
+
+            <input name="email" type="text" placeholder="Email">
+            <br><br>
+           
 
         {{-- Rollen --}}
         <label>Kies een rol:</label><br>
@@ -48,6 +51,23 @@
         </form>
     @endsection
 
-</body>
+    @section('ViewGebruikers')
 
+    <div class="AllUsers">
+    <h2>Alle Gebruikers</h2>
+
+@foreach($users as $user)
+    {{-- Gebruikers Container --}}
+     <div class="GebruikerContainer">
+        <div class="GebruikerBox">
+        <h3>Gebruikersnaam: <span class="DatabaseInfo">{{$user->name}}</span></h3>  
+        <p>Role: <span class="DatabaseInfo">{{$user->role}}</span></p>
+        <p>Email: <span class="DatabaseInfo">{{$user->email}}</span></p>
+        </div>
+     </div>
+@endforeach
+</div>
+@endsection
+
+</body>
 </html>

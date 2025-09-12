@@ -32,15 +32,18 @@ Route::get('/gebruiker', [PageController::class, 'gebruiker']); // Gebruiker
 
 // Voeg een Artikel 
 Route::post('/AddArtikel', [ArtikelController::class, 'AddArtikel'])->name('artikels.add'); // Voeg Artikels in je Database
+
 // Loop een Artikel
-Route::get('/artikel', [ArtikelController::class, 'index'])->name('artikel.index'); //Loop the artikels in the page Artikelpage
+Route::get('/artikel', [ArtikelController::class, 'index'])->name('artikel.index'); //Loop de artikelen op de pagina Articlepage
 
 // Zoekopdracht 
 Route::get('/my_search', [SearchController::class, 'my_search'])->name('my_search');
-
 
 // Gebruiker page:
 // Gebruikers en wachtwoord registreren, inloggen en uitloggen 
 Route::post('/register', [UserController::class, 'register'])->name('register');
 // Route::post('/login', [UserController::class,'login'])->name('login');
 // Route::post('/logout', [UserController::class,'logout'])->name('logout');
+
+// Loop Gebuikers
+Route::get('/gebruiker', [UserController::class,'index'])->name('gebruiker.index'); //Loop alle gebuikers in het gebruiker pagina

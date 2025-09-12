@@ -56,7 +56,7 @@
         <h3>Artikelnaam: <span class="DatabaseInfo">{{$artikel->artikelnaam}}</span></h3>  
         <p>Artikelbeschrijving: <span class="DatabaseInfo">{{$artikel->artikelbeschrijving}}</span></p>
         <p>Leverancier: <span class="DatabaseInfo">{{$artikel->leverancier}}</span></p>
-        <p>Leverancier: <span class="DatabaseInfo">{{$artikel->emailadres}}</span></p>
+        <p>Emailadres: <span class="DatabaseInfo">{{$artikel->emailadres}}</span></p>
         </div>
      </div>
     @endforeach

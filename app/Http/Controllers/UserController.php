@@ -29,6 +29,14 @@ class UserController extends Controller
 
         # Logging in user 
         // Auth::login($user);
-        // return redirect('/');
+        return redirect('gebruiker');
     }
+
+
+        public function index()
+    {
+        $users = User::all();
+        return view('gebruiker', ['users' => $users]);
+    }
+
 }

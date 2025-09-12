@@ -45,6 +45,7 @@ Datum: 08-09-2025
 
             <div class="gebruiker-container">
                 @yield('Registration')
+                @yield('ViewGebruikers')
             </div>
         </div>
     </main>

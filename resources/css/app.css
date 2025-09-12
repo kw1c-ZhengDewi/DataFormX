@@ -44,16 +44,27 @@ main {
 main .container {
   padding: 1rem;
 }
-.AllProducts {
+.AllProducts,
+.AllUsers {
   margin: 2rem;
   padding: 1rem;
   border: 2px solid black;
 }
-.AllProducts .ArtikelContainer {
+.AllProducts .ArtikelContainer,
+.AllUsers .ArtikelContainer,
+.AllProducts .GebruikerContainer,
+.AllUsers .GebruikerContainer {
   gap: 1rem;
   /* adds space between rows and columns */
 }
-.AllProducts .ArtikelContainer .ArtikelBox {
+.AllProducts .ArtikelContainer .ArtikelBox,
+.AllUsers .ArtikelContainer .ArtikelBox,
+.AllProducts .GebruikerContainer .ArtikelBox,
+.AllUsers .GebruikerContainer .ArtikelBox,
+.AllProducts .ArtikelContainer .GebruikerBox,
+.AllUsers .ArtikelContainer .GebruikerBox,
+.AllProducts .GebruikerContainer .GebruikerBox,
+.AllUsers .GebruikerContainer .GebruikerBox {
   padding: 1rem;
   margin: 2rem;
   border: 2px black solid;
@@ -61,6 +72,6 @@ main .container {
   width: auto;
   white-space: wrap;
 }
-.AllProducts .ArtikelContainer .ArtikelBox .DatabaseInfo {
+.DatabaseInfo {
   font-size: 15px;
 }
